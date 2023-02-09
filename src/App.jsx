@@ -1,8 +1,12 @@
-import {Text} from "@chakra-ui/react";
+import ClassComponentExample from "./component/ClassComponentExample.jsx";
+import FunctionalComponentExample from "./component/FunctionalComponentExample.jsx";
 
 const App = () => {
     return (
-        <Text>Template Working...</Text>
+        <>
+            <ClassComponentExample />
+            <FunctionalComponentExample />
+        </>
     )
 }
 
