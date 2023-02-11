@@ -1,6 +1,11 @@
+import {Text} from "@chakra-ui/react";
+import {useLocation} from "react-router-dom";
+
 const NotFound = () => {
+    const location = useLocation()
+    const checkIfBadRoute = location?.state?.redirectedFrom ?? 'Not Found'
     return (
-        <Text>Not Found</Text>
+        <Text>{checkIfBadRoute}</Text>
     )
 }
 

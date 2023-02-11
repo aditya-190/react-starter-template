@@ -1,9 +1,10 @@
-import {Text} from "@chakra-ui/react";
 import {Route, Routes, useRoutes} from "react-router-dom";
 import Home from "./components/home/Home.jsx";
 import SomethingCool from "./components/somethingCool/SomethingCool.jsx";
 import NotFound from "./components/NotFound.jsx";
 import BadRoute from "./components/BadRoute.jsx";
+import IndexPage from "./components/indexPage/IndexPage.jsx";
+import HomeRealChild from "./components/home/HomeRealChild.jsx";
 
 const App = () => {
     // const routesListToTestUseRoutes = [
@@ -49,11 +50,10 @@ const App = () => {
         <Routes>
             <Route path={'/home'}>
                 <Route index element={<Home />} />
-                <Route path={'h1'} element={<Text>Home Child 1</Text>} />
-                <Route path={'h2'} element={<Text>Home Child 2</Text>} />
+                <Route path={':homeNumber'} element={<HomeRealChild />} />
             </Route>
 
-            <Route index element={<Text>Index Page</Text>} />
+            <Route index element={<IndexPage />} />
 
             <Route path={'/somethingCool'} element={<SomethingCool />} />
 
